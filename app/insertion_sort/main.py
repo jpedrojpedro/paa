@@ -1,3 +1,6 @@
+import app.utils.list as lst
+
+
 def insertion_sort(numeros):
     final = []
     for n in numeros:
@@ -18,7 +21,7 @@ def reorder(numeros, n):
 
 
 if __name__ == '__main__':
-    # entrada = [5, 2, 4, 6, 1, 3]
-    entrada = [10, 8, 12, 55, 7, 2, 100, 52, 17, 18, 21]
+    entrada = lst.generate_list(10)
+    print(entrada)
     insertion_sort(entrada)
     exit(0)

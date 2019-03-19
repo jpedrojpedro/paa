@@ -1,3 +1,4 @@
+import app.utils.list as lst
 import math
 
 
@@ -14,6 +15,7 @@ def binary_search(vetor, elemento, tamanho, inicio=None, fim=None):
 
 
 if __name__ == '__main__':
-    entrada = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    entrada = lst.generate_sorted_list(10)
+    print(entrada)
     print("Posição: {}".format(binary_search(entrada, 2, len(entrada))))
     exit(0)

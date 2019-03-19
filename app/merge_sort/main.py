@@ -1,3 +1,6 @@
+import app.utils.list as lst
+
+
 def merge(esquerda, direita):
     v = []
     e = d = 0
@@ -23,6 +26,7 @@ def merge_sort(vetor):
 
 
 if __name__ == '__main__':
-    entrada = [7, 5, 2, 3, 4, 1, 6]
+    entrada = lst.generate_list(10)
+    print(entrada)
     print(merge_sort(entrada))
     exit(0)
