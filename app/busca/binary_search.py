@@ -3,6 +3,8 @@ import app.utils.list as lst
 
 def binary_search(vetor, elemento, inicio=0):
     meio = len(vetor) // 2
+    if meio == 0:
+        return None
     if vetor[meio] == elemento:
         return inicio + meio
     if vetor[meio] < elemento:
