@@ -14,7 +14,7 @@ def verifica_soma(s1, s2, x):
     return None
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     l1 = generate_list(20)
     print(l1)
     l2 = generate_list(25)
