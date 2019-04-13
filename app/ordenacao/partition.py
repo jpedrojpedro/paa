@@ -3,7 +3,7 @@
 import app.utils.list as lst
 
 
-def partition_not_in_order(A):
+def partition_not_in_place(A):
     p = 0
     r = len(A) - 1
     x = A[r]
@@ -23,6 +23,6 @@ def partition_not_in_order(A):
 if __name__ == '__main__':
     entrada = lst.generate_list(20)
     print(entrada)
-    print(partition_not_in_order(entrada))
+    print(partition_not_in_place(entrada))
     exit(0)
 
