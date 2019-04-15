@@ -1,22 +1,29 @@
 # import sys
 # sys.path.append('/nethome/a/jpinheiro/Workspace/paa')
 import app.utils.list as lst
+import random
 
 
 def partition_not_in_place(vetor):
     ini = 0
-    pos = len(vetor) - 1
+    fim = len(vetor) - 1
+    # posicao aleatoria
+    pos = random.randint(0, fim)
+    # trocando pivo com ultima posicao
     pivo = vetor[pos]
+    vetor[pos] = vetor[fim]
+    vetor[fim] = pivo
+    # inicializando vetores auxiliares
     menores = []
     maiores = []
-    while ini < pos:
+    while ini <= fim:
         if vetor[ini] <= pivo:
             menores.append(vetor[ini])
         else:
             maiores.append(vetor[ini])
         ini += 1
-    final = menores + [pivo] + maiores
-    return final, len(menores)
+    novo_vetor = menores + [pivo] + maiores
+    return novo_vetor, len(menores)
 
 
 if __name__ == '__main__':
