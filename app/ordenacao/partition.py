@@ -3,26 +3,25 @@
 import app.utils.list as lst
 
 
-def partition_not_in_place(A):
-    p = 0
-    r = len(A) - 1
-    x = A[r]
+def partition_not_in_place(vetor):
+    ini = 0
+    pos = len(vetor) - 1
+    pivo = vetor[pos]
     menores = []
     maiores = []
-    j = p
-    while j < r:
-        if A[j] <= x:
-            menores.append(A[j])
+    while ini < pos:
+        if vetor[ini] <= pivo:
+            menores.append(vetor[ini])
         else:
-            maiores.append(A[j])
-        j += 1
-    final = menores + [x] + maiores
+            maiores.append(vetor[ini])
+        ini += 1
+    final = menores + [pivo] + maiores
     return final, len(menores)
 
 
 if __name__ == '__main__':
-    entrada = lst.generate_list(20)
+    entrada = lst.generate_positive_list(7)
     print(entrada)
-    print(partition_not_in_place(entrada))
-    exit(0)
-
+    vetor, pos = partition_not_in_place(entrada)
+    print(vetor)
+    print("pivô: {}".format(pos + 1))
